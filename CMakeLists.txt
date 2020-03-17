@@ -34,8 +34,8 @@ ament_target_dependencies(laser_geometry
 # which is appropriate when building the dll but not consuming it.
 target_compile_definitions(laser_geometry PRIVATE "LASER_GEOMETRY_BUILDING_LIBRARY")
 
-ament_export_include_directories(include)
-ament_export_interfaces(laser_geometry)
+#ament_export_include_directories(include)
+#ament_export_interfaces(laser_geometry)
 ament_export_libraries(laser_geometry)
 ament_export_dependencies(
   eigen3_cmake_module
@@ -44,7 +44,6 @@ ament_export_dependencies(
 
 install(
   TARGETS laser_geometry
-  EXPORT laser_geometry
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin
